@@ -1,3 +1,5 @@
+import * as Util from '@terrencecrowley/util';
+
 export interface ILog
 {
   dump: () => void;
@@ -7,33 +9,43 @@ export interface ILog
   value: (o: any, verbosity?: number) => void;
 }
 
-export const ILogger: ILog = { dump: dump, log: log, event: event, error: error, value: value };
-
-export function dump(): void
+export class Timer
 {
+  ilog: ILog;
+  o: any;
+  verbosity: number;
+  elapsed: Util.Elapsed;
+
+  constructor(ilog: ILog, kind: string, o: any, verbosity: number = 0)
+  {
+    this.ilog = ilog;
+    if (typeof o === 'string') o = { event: o };
+    this.o = o;
+    this.o.kind = kind;
+    this.verbosity = verbosity;
+    this.elapsed = new Util.Elapsed();
+  }
+
+  log(): void
+  {
+    this.elapsed.end();
+    this.o.ms = this.elapsed.ms();
+    this.ilog.log(this.o, this.verbosity);
+  }
 }
 
-export function log(o: any, verbosity: number = 0): void
+export class AsyncTimer extends Timer
 {
-  console.log(JSON.stringify(o));
+  constructor(ilog: ILog, o: any, verbosity: number = 0)
+  {
+    super(ilog, 'async', o, verbosity);
+  }
 }
 
-export function event(o: any, verbosity: number = 0): void
+export class SyncTimer extends Timer
 {
-  if (typeof o === 'string') o = { event: o };
-  o.kind = 'event';
-  log(o, verbosity);
-}
-
-export function error(o: any): void
-{
-  if (typeof o === 'string') o = { message: o };
-  o.kind = 'error';
-  log(o);
-}
-
-export function value(o: any, verbosity: number = 0): void
-{
-  o.kind = 'value';
-  log(o, verbosity);
+  constructor(ilog: ILog, o: any, verbosity: number = 0)
+  {
+    super(ilog, 'sync', o, verbosity);
+  }
 }

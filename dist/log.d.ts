@@ -1,3 +1,4 @@
+import * as Util from '@terrencecrowley/util';
 export interface ILog {
     dump: () => void;
     log: (o: any, verbosity?: number) => void;
@@ -5,9 +6,17 @@ export interface ILog {
     error: (o: any) => void;
     value: (o: any, verbosity?: number) => void;
 }
-export declare const ILogger: ILog;
-export declare function dump(): void;
-export declare function log(o: any, verbosity?: number): void;
-export declare function event(o: any, verbosity?: number): void;
-export declare function error(o: any): void;
-export declare function value(o: any, verbosity?: number): void;
+export declare class Timer {
+    ilog: ILog;
+    o: any;
+    verbosity: number;
+    elapsed: Util.Elapsed;
+    constructor(ilog: ILog, kind: string, o: any, verbosity?: number);
+    log(): void;
+}
+export declare class AsyncTimer extends Timer {
+    constructor(ilog: ILog, o: any, verbosity?: number);
+}
+export declare class SyncTimer extends Timer {
+    constructor(ilog: ILog, o: any, verbosity?: number);
+}
