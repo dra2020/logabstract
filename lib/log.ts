@@ -1,8 +1,9 @@
 import * as Util from '@terrencecrowley/util';
+import * as FSM from '@terrencecrowley/fsm';
 
 export interface ILog
 {
-  dump: () => void;
+  dump: () => FSM.Fsm;
   log: (o: any, verbosity?: number) => void;
   event: (o: any, verbosity?: number) => void;
   error: (o: any) => void;

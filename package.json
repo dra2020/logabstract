@@ -1,6 +1,6 @@
 {
   "name": "@terrencecrowley/logabstract",
-  "version": "1.0.6",
+  "version": "1.0.9",
   "description": "Simple logging abstract interface.",
   "main": "dist/logabstract.js",
   "types": "./dist/all.d.ts",
@@ -32,7 +32,8 @@
     "webpack-cli": "^3.2.3"
   },
   "dependencies": {
-    "@terrencecrowley/context": "^1.0.6",
+    "@terrencecrowley/context": "^1.0.8",
+    "@terrencecrowley/fsm": "^1.0.10",
     "@terrencecrowley/util": "^1.0.15"
   }
 }
