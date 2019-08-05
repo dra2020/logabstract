@@ -4,6 +4,7 @@ import * as FSM from '@terrencecrowley/fsm';
 export interface ILog
 {
   dump: () => FSM.Fsm;
+  stamp: (o: any) => void;
   log: (o: any, verbosity?: number) => void;
   event: (o: any, verbosity?: number) => void;
   error: (o: any) => void;
