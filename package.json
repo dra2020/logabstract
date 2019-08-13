@@ -1,5 +1,5 @@
 {
-  "name": "@terrencecrowley/logabstract",
+  "name": "@dra2020/logabstract",
   "version": "1.0.10",
   "description": "Simple logging abstract interface.",
   "main": "dist/logabstract.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/terrencecrowley/logabstract.git"
+    "url": "git+https://github.com/dra2020/logabstract.git"
   },
   "keywords": [
     "Typescript"
@@ -19,9 +19,9 @@
   "author": "Terry Crowley",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/terrencecrowley/logabstract/issues"
+    "url": "https://github.com/dra2020/logabstract/issues"
   },
-  "homepage": "https://github.com/terrencecrowley/logabstract#readme",
+  "homepage": "https://github.com/dra2020/logabstract#readme",
   "devDependencies": {
     "@types/node": "10.12.23",
     "source-map-loader": "^0.2.4",
@@ -32,8 +32,8 @@
     "webpack-cli": "^3.2.3"
   },
   "dependencies": {
-    "@terrencecrowley/context": "^1.0.8",
-    "@terrencecrowley/fsm": "^1.0.10",
-    "@terrencecrowley/util": "^1.0.15"
+    "@dra2020/context": "^1.0.8",
+    "@dra2020/fsm": "^1.0.10",
+    "@dra2020/util": "^1.0.15"
   }
 }
