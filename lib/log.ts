@@ -1,5 +1,5 @@
-import * as Util from '@terrencecrowley/util';
-import * as FSM from '@terrencecrowley/fsm';
+import * as Util from '@dra2020/util';
+import * as FSM from '@dra2020/fsm';
 
 export interface ILog
 {
