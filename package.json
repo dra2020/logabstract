@@ -1,6 +1,6 @@
 {
   "name": "@dra2020/logabstract",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Simple logging abstract interface.",
   "main": "dist/logabstract.js",
   "types": "./dist/all.d.ts",
