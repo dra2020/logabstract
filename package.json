@@ -1,6 +1,6 @@
 {
   "name": "@dra2020/logabstract",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Simple logging abstract interface.",
   "main": "dist/logabstract.js",
   "types": "./dist/all.d.ts",
@@ -25,15 +25,15 @@
   "devDependencies": {
     "@types/node": "12.7.2",
     "source-map-loader": "^0.2.4",
-    "ts-loader": "^6.0.4",
+    "ts-loader": "^6.2.1",
     "tsify": "^4.0.1",
-    "typescript": "^3.5.3",
-    "webpack": "^4.39.2",
-    "webpack-cli": "^3.3.7"
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
   },
   "dependencies": {
-    "@dra2020/context": "^1.0.12",
-    "@dra2020/fsm": "^1.0.14",
-    "@dra2020/util": "^1.0.27"
+    "@dra2020/context": "^1.0.14",
+    "@dra2020/fsm": "^1.2.1",
+    "@dra2020/util": "^1.0.40"
   }
 }
