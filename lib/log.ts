@@ -9,6 +9,8 @@ export interface ILog
   event: (o: any, verbosity?: number) => void;
   error: (o: any) => void;
   value: (o: any, verbosity?: number) => void;
+  chatter: (s: string) => void;
+  chatters: () => string[];
 }
 
 export class Timer

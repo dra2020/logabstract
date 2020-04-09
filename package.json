@@ -1,6 +1,6 @@
 {
   "name": "@dra2020/logabstract",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Simple logging abstract interface.",
   "main": "dist/logabstract.js",
   "types": "./dist/all.d.ts",
@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "@dra2020/context": "^1.0.14",
-    "@dra2020/fsm": "^1.2.1",
-    "@dra2020/util": "^1.0.40"
+    "@dra2020/fsm": "^1.3.1",
+    "@dra2020/util": "^1.0.48"
   }
 }
